@@ -1,0 +1,12 @@
+.background{
+  &__circle--big{
+    position: absolute;
+    width: 1253px;
+    height: 1253px;
+    right: -55%;
+    top: -50%;
+
+    background-color: #BAABDA;
+    filter: blur(715px);
+  }
+}

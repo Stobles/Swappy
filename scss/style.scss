@@ -1,0 +1,116 @@
+//Миксины//
+
+@import "help/mixin.scss";
+
+//Шрифты по умолчанию//
+
+@import "help/fonts.scss";
+
+// Переменные //
+$font-Patua: "Patua";
+$font-Mariupol-Regular: "Mariupol-Regular";
+$font-Mariupol-Medium: "Mariupol-Medium";
+$font-Mariupol-Bold: "Mariupol-Bold";
+
+$textcolor: #555555;
+$whitecolor: #FFFFFF;
+$purplecolor: #8175FE;
+
+$scrollThumbColor: #999999;
+$scrollBarColor: transparent;
+
+$gradientcolor: radial-gradient(142.5% 1157.06% at -9.5% -20%, #5BA5E9 0%, #D16EFF 100%);
+$gradientcolor-hover: radial-gradient(142.5% 1157.06% at -9.5% -20%, #D16EFF 0%, #5BA5E9 100%);
+
+$maxWidthContainer: 1110;
+$containerPadding: 30;
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$tablet: 991.98;
+$mobile: 767.98;
+$mobileMedium: 479.98;
+$mobileSmall: 360.98;
+
+//Обнуление//
+
+*{box-sizing: border-box;}
+html,body{font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;}
+input,button,textarea{font-family: inherit;}
+input{padding: 0; margin: 0; border: 0; }
+input::-ms-clear{display: none;}
+input:focus{outline: none;}
+button {padding: 0;border: none;font: inherit;color: inherit;background-color: transparent;cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul{padding-inline-start: 0!important;margin: 0;}
+ul li {list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;margin: 0;}
+
+// Стили//
+
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        width: 11px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: $scrollBarColor;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: $scrollThumbColor;
+        border-radius: 50px;
+        border: 3px solid #fff;
+    }
+}
+
+body{
+    color: $textcolor;
+    font-family: $font-Mariupol-Regular;
+    margin: 0;
+    height: 1000px;
+    -webkit-tap-highlight-color: transparent;
+    
+    &.lock{
+        @media (max-width: $tablet + px) {
+            overflow: hidden;
+            touch-action: none;
+        }
+    }
+}  
+
+.wrapper{
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex: 1 1 100%;
+}
+
+.container{
+    max-width: $maxWidthContainer + px;
+    padding: 0 $containerPadding / 2 + px;
+    margin: 0px auto;
+}
+// Подключение остальных стилей //
+
+    // blocks
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+    // pages
+@import "pages/mainpage.scss";
+    // help
+@import "help/help.scss";
+@import "help/select.scss";
+@import "help/background.scss";

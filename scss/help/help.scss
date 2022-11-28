@@ -1,0 +1,216 @@
+.button{
+  position: relative;
+  background: $gradientcolor;
+
+  font-family: $font-Mariupol-Medium;
+  font-size: 16px;
+  line-height: 15px;
+
+  color: $whitecolor;
+
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.17);
+  border-radius: 15px;
+
+  padding: 13px 24px;
+
+  z-index: 10;
+
+  overflow: hidden;
+
+  &:hover{
+    &::before{
+      opacity: 1;
+    }
+  }
+
+  &::before{
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $gradientcolor-hover;
+    transition: opacity 0.3s ease;
+    z-index: -10;
+  }
+
+  &.exchange{
+    width: 100%;
+    padding: 13px 0px;
+  }
+
+  &.see-all{
+    padding: 13px 54px;
+  }
+}
+
+.button__create{
+  position: relative;
+
+  font-family: $font-Mariupol-Medium;
+  font-size: 16px;
+  line-height: 15px;
+
+  -webkit-text-fill-color: transparent;
+
+  background: $gradientcolor;
+  -webkit-background-clip: text;
+
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.17);
+  border-radius: 15px;
+
+  padding: 13px 24px;
+
+  z-index: 10;
+
+  overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 15px; 
+      padding: 2px;
+      background: $gradientcolor; 
+      -webkit-mask: 
+         linear-gradient(#fff 0 0) content-box, 
+         linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude; 
+    }
+}
+
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// .main__title{
+//   font-family: $font-Patua;
+//   @include adaptiv-value('font-size', 96, 42, 1);
+//   @include adaptiv-value('line-height', 117, 86, 1);
+
+//   -webkit-text-fill-color: transparent;
+
+//   background-image: $gradientcolor;
+//   -webkit-background-clip: text;
+
+//   text-transform: uppercase;
+// }
+
+.title{
+  font-family: $font-Mariupol-Bold;
+  @include adaptiv-value('font-size', 48, 32, 1);
+  @include adaptiv-value('line-height', 46, 30, 1);
+
+  background: $gradientcolor;
+  background-clip: text;
+}
+
+.title-bold-32{
+  font-family: $font-Mariupol-Bold;
+  font-size: 32px;
+  line-height: 31px;
+
+  color: $textcolor;
+}
+
+.title-bold-28{
+  font-family: $font-Mariupol-Bold;
+  font-size: 28px;
+  line-height: 27px;
+
+  color: $textcolor;
+}
+
+.title-medium-22{
+  font-family: $font-Mariupol-Medium;
+  font-size: 22px;
+  line-height: 21px;
+
+  color: $textcolor;
+}
+
+.title-medium-18{
+  font-family: $font-Mariupol-Medium;
+  font-size: 18px;
+  line-height: 17px;
+
+  color: $textcolor;
+}
+
+.title-medium-16{
+  font-family: $font-Mariupol-Medium;
+  font-size: 16px;
+  line-height: 15px;
+
+  color: $textcolor;
+}
+
+.title-medium-14{
+  font-family: $font-Mariupol-Medium;
+  font-size: 14px;
+  line-height: 13px;
+
+  color: $textcolor;
+}
+
+.title-medium-12{
+  font-family: $font-Mariupol-Medium;
+  font-size: 12px;
+  line-height: 12px;
+
+  color: $textcolor;
+}
+
+.title-medium-10{
+  font-family: $font-Mariupol-Medium;
+  font-size: 10px;
+  line-height: 10px;
+
+  color: $textcolor;
+}
+
+.text-regular-18{
+  font-size: 18px;
+  line-height: 17px;
+
+  color: $textcolor;
+}
+
+.text-regular-16{
+  font-size: 16px;
+  line-height: 15px;
+
+  color: $textcolor;
+
+  opacity: 0.5;
+}
+
+.text-regular-14{
+  font-size: 14px;
+  line-height: 13px;
+
+  color: $textcolor;
+}
+
+.text-regular-12{
+  font-size: 12px;
+  line-height: 12px;
+
+  color: $textcolor;
+}
+
+.text-regular-10{
+  font-size: 10px;
+  line-height: 10px;
+
+  color: $textcolor;
+}
+
+.mbottom{
+  @include adaptiv-value('margin-bottom', 100, 40, 1);
+}

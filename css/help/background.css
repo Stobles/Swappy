@@ -1,0 +1,7 @@
+.background__circle--big {
+  width: 1253px;
+  height: 1253px;
+  background-color: #BAABDA;
+  -webkit-filter: blur(715px);
+          filter: blur(715px);
+}
