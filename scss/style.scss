@@ -47,7 +47,7 @@ a:hover{text-decoration: none;}
 ul{padding-inline-start: 0!important;margin: 0;}
 ul li {list-style: none;}
 img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;margin: 0;}
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
 
 // Стили//
 
@@ -108,8 +108,7 @@ body{
 @import "blocks/header.scss";
 @import "blocks/footer.scss";
 @import "blocks/main.scss";
-    // pages
-@import "pages/mainpage.scss";
+@import "blocks/advantages.scss";
     // help
 @import "help/help.scss";
 @import "help/select.scss";

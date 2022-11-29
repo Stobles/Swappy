@@ -88,31 +88,24 @@
   text-overflow: ellipsis;
 }
 
-// .main__title{
-//   font-family: $font-Patua;
-//   @include adaptiv-value('font-size', 96, 42, 1);
-//   @include adaptiv-value('line-height', 117, 86, 1);
-
-//   -webkit-text-fill-color: transparent;
-
-//   background-image: $gradientcolor;
-//   -webkit-background-clip: text;
-
-//   text-transform: uppercase;
-// }
-
 .title{
+  width: fit-content;
   font-family: $font-Mariupol-Bold;
   @include adaptiv-value('font-size', 48, 32, 1);
-  @include adaptiv-value('line-height', 46, 30, 1);
+  @include adaptiv-value('line-height', 52, 36, 1);
+
+  -webkit-text-fill-color: transparent;
 
   background: $gradientcolor;
-  background-clip: text;
+  -webkit-background-clip: text;
+
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 
 .title-bold-32{
   font-family: $font-Mariupol-Bold;
-  font-size: 32px;
+  @include adaptiv-value('font-size', 32, 24, 1);
   line-height: 31px;
 
   color: $textcolor;
@@ -120,7 +113,7 @@
 
 .title-bold-28{
   font-family: $font-Mariupol-Bold;
-  font-size: 28px;
+  @include adaptiv-value('font-size', 28, 22, 1);
   line-height: 27px;
 
   color: $textcolor;
@@ -128,7 +121,7 @@
 
 .title-medium-22{
   font-family: $font-Mariupol-Medium;
-  font-size: 22px;
+  @include adaptiv-value('font-size', 22, 18, 1);
   line-height: 21px;
 
   color: $textcolor;
@@ -136,7 +129,7 @@
 
 .title-medium-18{
   font-family: $font-Mariupol-Medium;
-  font-size: 18px;
+  @include adaptiv-value('font-size', 18, 14, 1);
   line-height: 17px;
 
   color: $textcolor;
@@ -144,7 +137,7 @@
 
 .title-medium-16{
   font-family: $font-Mariupol-Medium;
-  font-size: 16px;
+  @include adaptiv-value('font-size', 16, 14, 1);
   line-height: 15px;
 
   color: $textcolor;
@@ -152,7 +145,7 @@
 
 .title-medium-14{
   font-family: $font-Mariupol-Medium;
-  font-size: 14px;
+  @include adaptiv-value('font-size', 14, 12, 1);
   line-height: 13px;
 
   color: $textcolor;
@@ -160,7 +153,7 @@
 
 .title-medium-12{
   font-family: $font-Mariupol-Medium;
-  font-size: 12px;
+  @include adaptiv-value('font-size', 12, 10, 1);
   line-height: 12px;
 
   color: $textcolor;
@@ -168,21 +161,21 @@
 
 .title-medium-10{
   font-family: $font-Mariupol-Medium;
-  font-size: 10px;
+  @include adaptiv-value('font-size', 10, 8, 1);
   line-height: 10px;
 
   color: $textcolor;
 }
 
 .text-regular-18{
-  font-size: 18px;
+  @include adaptiv-value('font-size', 18, 16, 1);
   line-height: 17px;
 
   color: $textcolor;
 }
 
 .text-regular-16{
-  font-size: 16px;
+  @include adaptiv-value('font-size', 16, 14, 1);
   line-height: 15px;
 
   color: $textcolor;
@@ -191,21 +184,21 @@
 }
 
 .text-regular-14{
-  font-size: 14px;
+  @include adaptiv-value('font-size', 14, 12, 1);
   line-height: 13px;
 
   color: $textcolor;
 }
 
 .text-regular-12{
-  font-size: 12px;
+  @include adaptiv-value('font-size', 12, 10, 1);
   line-height: 12px;
 
   color: $textcolor;
 }
 
 .text-regular-10{
-  font-size: 10px;
+  @include adaptiv-value('font-size', 10, 8, 1);
   line-height: 10px;
 
   color: $textcolor;

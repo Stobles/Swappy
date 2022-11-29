@@ -19,11 +19,11 @@
     <div class="header__container container">
       <header class="header">
         <div class="header__inner">
-          <button class="header__burger">
+          <button id="burger-open" class="header__burger">
             <span class="header__burger--span"></span>
           </button>
-          <div class="header__content">
-            <button class="header__content--close"></button>
+          <div data-media="991" id="header-sidebar" class="header__content">
+            <button id="burger-close" class="header__content--close"></button>
             <div class="header__content--logo">
               <img src="img/header/Logo.svg" alt="" class="header__content--img">
             </div>
@@ -56,7 +56,55 @@
       </header>
     </div>
     <main class="main">
-
+      <section class="advantages">
+        <div class="advantages__container container">
+          <div class="advantages__inner">
+            <h3 class="advantages__title title">Advantage</h3>
+            <ul class="advantages__cards">
+              <li class="advantages__card advantages__support--card">
+                <div class="advantages__card--content">
+                  <h3 class="advantages__card--title title-bold-28 ellipsis">
+                    Support
+                  </h3>
+                  <div class="advantages__card--text text-regular-16 ellipsis">
+                    <p class="advantages__card--p">Polite technical support around the clock ready to help you on any matter.clock ready to help you on any matter.clock ready to help you on any matter.</p>
+                  </div>
+                </div>
+                <div class="advantages__card--imgbox advantages__support--imgbox" draggable="false">
+                  <img src="img/advantages/support.svg" draggable="false" alt="#" class="advantages__card--img">
+                </div>
+              </li>
+              <li class="advantages__card advantages__confidentiality--card">
+                <div class="advantages__card--content">
+                  <h3 class="advantages__card--title title-bold-28 ellipsis">
+                    confidentiality
+                  </h3>
+                  <div class="advantages__card--text text-regular-16 ellipsis">
+                    <p class="advantages__card--p">We do not store or share your personal information with third parties.</p>
+                  </div>
+                </div>
+                <div class="advantages__card--imgbox advantages__confidentiality--imgbox" draggable="false">
+                  <img src="img/advantages/confidentiality.svg" draggable="false" alt="#" class="advantages__card--img">
+                </div>
+              </li>
+              <li class="advantages__card advantages__warranty--card">
+                <div class="advantages__card--content">
+                  <h3 class="advantages__card--title title-bold-28 ellipsis">
+                    Warranty
+                  </h3>
+                  <div class="advantages__card--text text-regular-16 ellipsis">
+                    <p class="advantages__card--p">100% translation guarantee. The reliability of our service is confirmed by numerous reviews.
+                    </p>
+                  </div>
+                </div>
+                <div class="advantages__card--imgbox advantages__warranty--imgbox" draggable="false">
+                  <img src="img/advantages/warranty.svg" draggable="false" alt="#" class="advantages__card--img advantages__warranty--img">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__container container">

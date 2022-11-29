@@ -10,6 +10,8 @@
   
       background-color: #BAABDA;
       filter: blur(715px);
+
+      z-index: -1;
     }
 
     &--big2{
@@ -22,6 +24,8 @@
 
       background: #FEC7D7;
       filter: blur(382px);
+
+      z-index: -1;
     }
 
     &--big3{
@@ -34,6 +38,8 @@
 
       background: #7747FF;
       filter: blur(468px);
+
+      z-index: -1;
     }
 
     &--medium{
@@ -47,6 +53,8 @@
       background-color: #FEC7D7;
 
       filter: blur(237px);
+
+      z-index: -1;
     }
   }
 }
