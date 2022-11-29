@@ -127,7 +127,7 @@ $header-content-nav: 190;
 
       z-index: 20;
 
-      @media (min-width: $mobile + px) {
+      @media (max-width: $mobile + px) {
         top: 0;
         left: 0;
       }
