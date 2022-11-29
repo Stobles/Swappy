@@ -1,24 +1,24 @@
 @font-face {
   font-family: "Patua";
-  src: url("../../fonts/patuaone-regular-webfont.woff2") format("woff2"), url("../../fonts/patuaone-regular-webfont.woff") format("woff"), url("../../fonts/patuaone-regular-webfont.svg#patua_oneregular") format("svg");
+  src: url("./../fonts/patuaone-regular-webfont.woff2") format("woff2"), url("./../fonts/patuaone-regular-webfont.woff") format("woff"), url("../../fonts/patuaone-regular-webfont.svg#patua_oneregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Mariupol-Regular";
-  src: url("../../fonts/Mariupol-Regular.woff2") format("woff2"), url("../../fonts/Mariupol-Regular.woff") format("woff");
+  src: url("./../fonts/Mariupol-Regular.woff2") format("woff2"), url("./../fonts/Mariupol-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Mariupol-Medium";
-  src: url("../../fonts/Mariupol-Medium.woff2") format("woff2"), url("../../fonts/Mariupol-Medium.woff") format("woff");
+  src: url("./../fonts/Mariupol-Medium.woff2") format("woff2"), url("./../fonts/Mariupol-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Mariupol-Bold";
-  src: url("../../fonts/Mariupol-Bold.woff2") format("woff2"), url("../../fonts/Mariupol-Bold.woff") format("woff");
+  src: url("./../fonts/Mariupol-Bold.woff2") format("woff2"), url("./../fonts/Mariupol-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
