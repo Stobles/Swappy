@@ -1,16 +1,24 @@
 $select-height: 15;
 $select-padding: 10;
-$select-list-height: 80;
+$select-list-height: 90;
 $select-arrow-color: #111111;
 $select-list-paragraph-hover: #a8a0ff;
 
 .select{
   position: relative;
-  margin-right: 35px;
   height: $select-height + px;
   user-select: none;
-
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (min-width: $tablet + px) {
+    margin-right: 35px;
+  }
+
+  @media (max-width: $tablet + px) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 
   &.active{
     .select__arrow{
@@ -24,12 +32,15 @@ $select-list-paragraph-hover: #a8a0ff;
   &__input{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     gap: 10px;
 
-    min-width: 160px;
-    max-width: 200px;
+    @media (min-width: $tablet + px) {
+      justify-content: space-between;
+      min-width: 160px;
+      max-width: 200px;
+    }
   }
 
   &__text{
@@ -59,10 +70,12 @@ $select-list-paragraph-hover: #a8a0ff;
     display: none;
     position: absolute;
     min-width: 100%;
-    top: $select-height + 5 + px;
+    top: $select-height + 15 + px;
     left: 50%;
     transform: translateX(-50%);
     padding: $select-padding + px;
+
+    -webkit-tap-highlight-color: transparent;
 
     max-width: 200px;
 
@@ -104,7 +117,7 @@ $select-list-paragraph-hover: #a8a0ff;
     display: flex;
     align-items: center;
     gap: 10px;
-    height: $select-list-height / 2 + px;
+    height: $select-list-height / 2 - $select-padding / 2 + px;
 
     padding: 0 10px;
 

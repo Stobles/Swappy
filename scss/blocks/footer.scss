@@ -1,1 +1,111 @@
-//
+// Переменные 
+
+$footer-background-gradient: linear-gradient(167.96deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 100%);
+$footer-background-mobile-gradient: linear-gradient(167.96deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
+$footer-imgbox-gradient: radial-gradient(100% 100% at 0% 0%, rgba(112, 160, 255, 0.2) 0%, rgba(142, 181, 255, 0) 100%);
+
+.footer{
+  flex: 0 0 auto;
+
+  padding: 32px 0px;
+  background: $footer-background-gradient;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(50px);
+  border-radius: 25px 25px 0px 0px;
+
+  @media (max-width: $mobile + px) {
+    background: $footer-background-mobile-gradient;
+  }
+
+  &__list{
+    @media (min-width: $tablet + px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: $tablet + px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 30px;
+      justify-items: center;
+    }
+
+    @media (max-width: $mobileMedium + px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+      justify-items: center;
+    }
+  }
+
+  &__paragraph{
+    display: grid;
+    grid-template-columns: 48px minmax(120px, 168px);
+    grid-template-rows: repeat(2, 24px);
+    column-gap: 10px;
+    align-items: center;
+    &--imgbox{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: $footer-imgbox-gradient;
+      box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(12px);
+
+      background: linear-gradient(180deg, rgba(255,255,255, 1) 0%,rgba(255,255,255, 0) 70%);
+
+      border: 1px solid rgba(255, 255, 255, 0.596);
+
+      border-radius: 13px;
+
+      margin: 1px;
+
+      grid-row: 1/3;
+
+      @media (any-hover: hover) {
+        &:hover{
+          &::after{
+            opacity: 1;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -1px;
+        border-radius: inherit;
+        transition: .3s opacity ease;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    &--img{
+      width: 70%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    &--title{
+      opacity: .5;
+    }
+
+    &--text{
+      align-self: flex-start;
+      transition: .3s opacity ease;
+      @media (any-hover: hover) {
+        &:hover{
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
