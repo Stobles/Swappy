@@ -114,6 +114,7 @@ body {
   font-family: "Mariupol-Regular";
   margin: 0;
   height: 1500px;
+  background: linear-gradient(180.46deg, rgb(138, 143, 242) 0%, rgb(255, 255, 255) 100%);
 }
 @media (max-width: 991.98px) {
   body.lock {

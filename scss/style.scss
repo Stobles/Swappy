@@ -21,6 +21,8 @@ $scrollBarColor: transparent;
 
 $gradientcolor: radial-gradient(142.5% 1157.06% at -9.5% -20%, #5BA5E9 0%, #D16EFF 100%);
 $gradientcolor-hover: radial-gradient(142.5% 1157.06% at -9.5% -20%, #D16EFF 0%, #5BA5E9 100%);
+$gradientcolor-body: radial-gradient(142.5% 1157.06% at -9.5% -20%, #5BA5E9 0%, #D16EFF 100%);
+
 
 $maxWidthContainer: 1110;
 $containerPadding: 30;
@@ -75,6 +77,7 @@ body{
     font-family: $font-Mariupol-Regular;
     margin: 0;
     height: 1500px;
+    background: linear-gradient(180.46deg, rgb(138, 143, 242) 0%, rgb(255, 255, 255) 100%);
     
     &.lock{
         @media (max-width: $tablet + px) {
