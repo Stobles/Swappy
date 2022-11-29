@@ -57,7 +57,6 @@ $footer-imgbox-gradient: radial-gradient(100% 100% at 0% 0%, rgba(112, 160, 255,
       height: 48px;
       background: $footer-imgbox-gradient;
       box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(12px);
 
       background: linear-gradient(180deg, rgba(255,255,255, 1) 0%,rgba(255,255,255, 0) 70%);
 
@@ -68,6 +67,10 @@ $footer-imgbox-gradient: radial-gradient(100% 100% at 0% 0%, rgba(112, 160, 255,
       margin: 1px;
 
       grid-row: 1/3;
+
+      @media (min-width: $mobile + px) {
+        backdrop-filter: blur(12px);
+      }
 
       @media (any-hover: hover) {
         &:hover{

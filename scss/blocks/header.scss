@@ -26,6 +26,10 @@ $header-content-nav: 190;
 
   margin-top: $header-margin-top + px;
 
+  @media (min-width: $mobile + px) {
+    backdrop-filter: blur(50px);
+  }
+
   &__container{
     width: 100%;
   }
