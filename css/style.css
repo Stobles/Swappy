@@ -276,6 +276,7 @@ body {
     transition: 0.3s -webkit-transform ease;
     transition: 0.3s transform ease;
     transition: 0.3s transform ease, 0.3s -webkit-transform ease;
+    will-change: transform;
     z-index: 20;
   }
 }
