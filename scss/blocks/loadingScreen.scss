@@ -1,0 +1,51 @@
+.loading{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 100;
+
+  background-color: #fff;
+
+  transition: .5s opacity ease;
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__logo{
+    @include adaptiv-value('width', 200, 130, 1);
+    width: 200px;
+    transform: translateX(-13%);
+    &--img{
+      width: 100%;
+    }
+  }
+
+  &__text{
+    font-family: $font-Patua;
+    text-transform: uppercase;
+
+    @include adaptiv-value('font-size', 48, 28, 1);
+
+    animation: flicker 2s infinite;
+  }
+}
+
+@keyframes flicker{
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

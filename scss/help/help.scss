@@ -1,3 +1,8 @@
+// Переменные
+
+$form-background-gradient: linear-gradient(167.96deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+$form-border-color: rgba(255, 255, 255, 0.473);
+
 .button{
   position: relative;
   background: $gradientcolor;
@@ -6,16 +11,20 @@
   font-size: 16px;
   line-height: 15px;
 
-  color: $whitecolor;
+  color: $whitecolor!important;
 
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.17);
   border-radius: 15px;
 
   padding: 13px 24px;
 
-  z-index: 10;
-
   overflow: hidden;
+
+  text-align: center;
+
+  text-overflow: ellipsis;
+
+  z-index: 0;
 
   &:hover{
     &::before{
@@ -36,6 +45,10 @@
     transition: opacity 0.3s ease;
     z-index: -10;
   }
+  
+  &.login{
+    max-width: 170px;
+  }
 
   &.exchange{
     width: 100%;
@@ -43,7 +56,22 @@
   }
 
   &.see-all{
+    max-width: 250px;
     padding: 13px 54px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 0;
+
+    @media (max-width: $mobileMedium + px) {
+      padding: 13px 35px;
+    }
+  }
+
+  &__link{
+    color: $whitecolor;
   }
 }
 
@@ -81,6 +109,29 @@
       -webkit-mask-composite: xor;
               mask-composite: exclude; 
     }
+}
+
+.gradient{
+  width: fit-content;
+  -webkit-text-fill-color: transparent;
+
+  background: $gradientcolor;
+  -webkit-background-clip: text;
+}
+
+.form__input{
+  background: $form-background-gradient;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.06);
+
+  border-radius: 15px;
+
+  border: 1px solid $form-border-color;
+
+  padding: 8px;
+
+  &:not(:last-child){
+    margin-bottom: 20px;
+  }
 }
 
 .ellipsis{
@@ -179,8 +230,6 @@
   line-height: 15px;
 
   color: $textcolor;
-
-  opacity: 0.5;
 }
 
 .text-regular-14{
@@ -205,5 +254,5 @@
 }
 
 .mbottom{
-  @include adaptiv-value('margin-bottom', 100, 40, 1);
+  @include adaptiv-value('margin-bottom', 200, 90, 1);
 }

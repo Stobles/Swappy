@@ -21,8 +21,6 @@ $scrollBarColor: transparent;
 
 $gradientcolor: radial-gradient(142.5% 1157.06% at -9.5% -20%, #5BA5E9 0%, #D16EFF 100%);
 $gradientcolor-hover: radial-gradient(142.5% 1157.06% at -9.5% -20%, #D16EFF 0%, #5BA5E9 100%);
-$gradientcolor-body: radial-gradient(142.5% 1157.06% at -9.5% -20%, #5BA5E9 0%, #D16EFF 100%);
-
 
 $maxWidthContainer: 1110;
 $containerPadding: 30;
@@ -37,7 +35,7 @@ $mobileSmall: 360.98;
 //Обнуление//
 
 *{box-sizing: border-box;}
-html,body{font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;}
+html,body{position: sticky;font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;}
 input,button,textarea{font-family: inherit;}
 input{padding: 0; margin: 0; border: 0; }
 input::-ms-clear{display: none;}
@@ -49,7 +47,7 @@ a:hover{text-decoration: none;}
 ul{padding-inline-start: 0!important;margin: 0;}
 ul li {list-style: none;}
 img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;margin: 0;}
 
 // Стили//
 
@@ -75,12 +73,9 @@ html{
 body{
     color: $textcolor;
     font-family: $font-Mariupol-Regular;
-    margin: 0;
-    height: 1500px;
-    background: linear-gradient(180.46deg, rgb(138, 143, 242) 0%, rgb(255, 255, 255) 100%);
-    
+    margin: 0;  
     &.lock{
-        @media (max-width: $tablet + px) {
+        @media (min-width: $mobileMedium + px) {
             overflow: hidden;
             touch-action: none;
         }
@@ -108,10 +103,14 @@ body{
 // Подключение остальных стилей //
 
     // blocks
+@import "blocks/loadingScreen.scss";
 @import "blocks/header.scss";
 @import "blocks/footer.scss";
 @import "blocks/main.scss";
 @import "blocks/advantages.scss";
+@import "blocks/news.scss";
+@import "blocks/reviews.scss";
+@import "blocks/converter.scss";
     // help
 @import "help/help.scss";
 @import "help/select.scss";

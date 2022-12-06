@@ -1,0 +1,15 @@
+.reviews__companies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.reviews__company {
+  max-width: 230px;
+}
+.reviews__company--img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}

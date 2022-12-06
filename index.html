@@ -5,11 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/app.js" type="module" defer></script>
+  <script src="js/app.js" type="module"></script>
   <title>Topseller</title>
 </head>
 <body>
 
+  <div id="loading" class="loading">
+    <div class="loading__inner">
+      <div class="loading__logo">
+        <img class="loading__logo--img" src="img/lodaingScreen/Frame.svg" alt="#">
+      </div>
+      <div class="loading__text gradient">Swappy</div>
+    </div>
+  </div>
   <div class="wrapper">
     <div class="background">
       <div class="background__circle--big"></div>
@@ -24,84 +32,238 @@
           </button>
           <div data-media="991" id="header-sidebar" class="header__content">
             <button id="burger-close" class="header__content--close"></button>
-            <div class="header__content--logo">
+            <h2 class="header__content--logo">
               <img src="img/header/Logo.svg" alt="" class="header__content--img">
-            </div>
+            </h2>
             <nav class="header__nav">
               <ul class="header__nav--list">
                 <li class="header__nav--paragraph">
-                  <a id="nav-link" href="#" class="header__nav--link title-medium-16">Home</a>
+                  <a data-name="nav-link" data-link href="#" class="header__nav--link title-medium-16">Main</a>
                 </li>
                 <li class="header__nav--paragraph">
-                  <a id="nav-link" href="#" class="header__nav--link title-medium-16">About</a>
+                  <a data-name="nav-link" data-link href="#advantages" class="header__nav--link title-medium-16">Advantages</a>
                 </li>
                 <li class="header__nav--paragraph">
-                  <a id="nav-link" href="#" class="header__nav--link title-medium-16">Reviews</a>
+                  <a data-name="nav-link" data-link href="#news" class="header__nav--link title-medium-16">News</a>
                 </li>
                 <li class="header__nav--paragraph">
-                  <a id="nav-link" href="#" class="header__nav--link title-medium-16">FAQ</a>
+                  <a data-name="nav-link" data-link href="#reviews" class="header__nav--link title-medium-16">Reviews</a>
                 </li>
   
               </ul>
             </nav>
-            <div class="header__select title-medium-16 select"></div>
-            <button class="header__button button">Login</button>
+            <div class="header__select--box">
+              <div class="header__select title-medium-16 select"></div>
+            </div>
+            <a data-name="button-login" class="header__button button login" href="">Login
+
+            </a> 
           </div>
           <h1 class="header__logo">
             <a href="/" class="header__logo--link">
-              <img src="./img/header/Logo.svg" alt="">
+              <img src="./img/header/Logo.svg" alt="#">
             </a>
           </h1>
         </div>
       </header>
     </div>
     <main class="main">
-      <section class="advantages">
+      <section class="converter">
+        <div class="converter__container container">
+          <div class="converter__inner">
+            <div class="converter__content">
+              <div class="converter__content--inner">
+                <div class="converter__content--imgbox">
+                  <img class="converter__content--img" src="img/converter/Swappy_img.svg" alt="">
+                </div>
+                <div class="converter__content--info">
+                  <h1 class="converter__content--title gradient">SWAPPY</h1>
+                  <h3 class="converter__content--subtitle title-bold-28">Fast currency exchanger</h3>
+                  <p class="converter__content--text text-regular-14">Our service helps to make any exchange safely and quickly.</p>
+                </div>
+              </div>
+            </div>
+            <div class="converter__calculator calculator">
+              <!-- Calculator converter -->
+              <div class="calculator__content">
+                <div class="calculator__content--inner">
+                  <!-- Send input -->
+                  <h5 class="calculator__content--label text-regular-14">
+                    <span class="calculator__content--title">SEND</span> 
+                    <span class="calculator__content--limit">Min: 1000.00  /  Max:33,432.65</span>
+                  </h5>
+                  <div class="calculator__content--send send form__input">
+                    <form method="POST" class="send__form">
+                      <div class="send__form--input">
+                        <input max="33430" type="number" class="send__input title-medium-16">
+                        <div class="send__currency title-medium-16">UAH</div>
+                      </div>
+                      <div class="send__form--box">
+                        <div class="send__form--select select">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- Send arrows -->
+                  <div class="send__arrows">
+                    <img class="send__arrows--img" src="img/converter/convert_arrows.svg" alt="#">
+                  </div>
+                  <!-- Get input -->
+                  <h5 class="calculator__content--label text-regular-14">
+                    <span class="calculator__content--title">GET</span> 
+                    <span class="calculator__content--limit">Reserve: 953.28</span>
+                  </h5>
+                  <div class="calculator__content--get send form__input">
+                    <form method="POST" class="send__form">
+                      <div class="send__form--input">
+                        <input max="33430" type="number" class="send__input title-medium-16">
+                        <div class="send__currency title-medium-16">USDT</div>
+                      </div>
+                      <div class="send__form--box get__form--box">
+                        <div class="get__form--select select">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <h5 class="calculator__content--label text-regular-14">
+                    <span class="calculator__content--title">Address</span> 
+                  </h5>
+
+                  <div class="calculator__content--address address form__input">
+                    <input class="address__input title-medium-16" type="text" value="TBFcVxHFCJGJj7hdpY9T3SF17r4mJ2L3u2" placeholder="TBFcVxHFCJGJj7hdpY9T3SF17r4mJ2L3u2" readonly>
+                    <div class="address__select--box">
+                      <div class="address__select select"></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="calculator__items">
+                <button class="calculator__button button exchange">Exchange</button>
+                <div class="calculator__agree">
+                  <input id="calculator-checkbox" class="calculator__agree--checkbox" type="checkbox" name="" id="">
+                  <label for="calculator-checkbox" class="calculator__agree--text title-medium-16">I agree with <a class="calculator__agree--link gradient" href=""> the rules of the exchange</a></label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="advantages" class="advantages mbottom">
         <div class="advantages__container container">
           <div class="advantages__inner">
-            <h3 class="advantages__title title">Advantage</h3>
+            <h3 data-name="advantages-title" class="advantages__title title">Advantage</h3>
             <ul class="advantages__cards">
               <li class="advantages__card advantages__support--card">
                 <div class="advantages__card--content">
-                  <h3 class="advantages__card--title title-bold-28 ellipsis">
+                  <h3 data-name="advantages-card-title" class="advantages__card--title title-bold-28 ellipsis">
                     Support
                   </h3>
                   <div class="advantages__card--text text-regular-16 ellipsis">
-                    <p class="advantages__card--p">Polite technical support around the clock ready to help you on any matter.clock ready to help you on any matter.clock ready to help you on any matter.</p>
+                    <p data-name="advantages-card-text" class="advantages__card--p">Polite technical support around the clock ready to help you on any matter.clock ready to help you on any matter.clock ready to help you on any matter.</p>
                   </div>
                 </div>
                 <div class="advantages__card--imgbox advantages__support--imgbox" draggable="false">
-                  <img src="img/advantages/support.svg" draggable="false" alt="#" class="advantages__card--img">
+                  <img src="img/advantages/support.webp" draggable="false" alt="#" class="advantages__card--img advantages__support--img">
                 </div>
               </li>
               <li class="advantages__card advantages__confidentiality--card">
                 <div class="advantages__card--content">
-                  <h3 class="advantages__card--title title-bold-28 ellipsis">
+                  <h3 data-name="advantages-card-title" class="advantages__card--title title-bold-28 ellipsis">
                     confidentiality
                   </h3>
                   <div class="advantages__card--text text-regular-16 ellipsis">
-                    <p class="advantages__card--p">We do not store or share your personal information with third parties.</p>
+                    <p data-name="advantages-card-text" class="advantages__card--p">We do not store or share your personal information with third parties.</p>
                   </div>
                 </div>
                 <div class="advantages__card--imgbox advantages__confidentiality--imgbox" draggable="false">
-                  <img src="img/advantages/confidentiality.svg" draggable="false" alt="#" class="advantages__card--img">
+                  <img src="img/advantages/confidentiality.webp" draggable="false" alt="#" class="advantages__card--img advantages__confidentiality--img">
                 </div>
               </li>
               <li class="advantages__card advantages__warranty--card">
                 <div class="advantages__card--content">
-                  <h3 class="advantages__card--title title-bold-28 ellipsis">
+                  <h3 data-name="advantages-card-title" class="advantages__card--title title-bold-28 ellipsis">
                     Warranty
                   </h3>
                   <div class="advantages__card--text text-regular-16 ellipsis">
-                    <p class="advantages__card--p">100% translation guarantee. The reliability of our service is confirmed by numerous reviews.
-                    </p>
+                    <p data-name="advantages-card-text" class="advantages__card--p">100% translation guarantee. The reliability of our service is confirmed by numerous reviews.</p>
                   </div>
                 </div>
                 <div class="advantages__card--imgbox advantages__warranty--imgbox" draggable="false">
-                  <img src="img/advantages/warranty.svg" draggable="false" alt="#" class="advantages__card--img advantages__warranty--img">
+                  <img src="img/advantages/warranty.webp" draggable="false" alt="#" class="advantages__card--img advantages__warranty--img">
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+      <section id="news" class="news mbottom">
+        <div class="news__container container">
+          <div class="background__circle--news"></div>
+          <div class="news__inner">
+            <h3 data-name="news-title" class="news__title title">News</h3>
+            <ul class="news__list">
+              <li class="news__paragraph">
+                <a href="#" class="news__paragraph--imgbox">
+                  <img src="img/news/news_1.webp" alt="#" class="news__paragraph--img">
+                </a>
+                <h5 data-name="news-p-title" class="news__paragraph--title title-medium-22">What cryptocurrency to invest in 2022</h5>
+                <div class="news__paragraph--description text-regular-16">
+                  <p data-name="news-p-text" class="news__paragraph--text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  <a data-name="news-p-button" href="" class="news__paragraph--readmore">Read More</a>
+                </div>
+              </li>
+              <li class="news__paragraph">
+                <a href="#" class="news__paragraph--imgbox">
+                  <img src="img/news/news_2.webp" alt="#" class="news__paragraph--img">
+                </a>
+                <h5 data-name="news-p-title" class="news__paragraph--title title-medium-22">What cryptocurrency to invest in 2022</h5>
+                <div class="news__paragraph--description text-regular-16">
+                  <p data-name="news-p-text" class="news__paragraph--text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  <a data-name="news-p-button" href="" class="news__paragraph--readmore">Read More</a>
+                </div>
+              </li>
+              <li class="news__paragraph">
+                <a href="#" class="news__paragraph--imgbox">
+                  <img src="img/news/news_3.webp" alt="#" class="news__paragraph--img">
+                </a>
+                <h5 data-name="news-p-title" class="news__paragraph--title title-medium-22">What cryptocurrency to invest in 2022</h5>
+                <div class="news__paragraph--description text-regular-16">
+                  <p data-name="news-p-text" class="news__paragraph--text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  <a data-name="news-p-button" href="" class="news__paragraph--readmore">Read More</a>
+                </div>
+              </li>
+            </ul>
+            <button data-name="button-see-all" class="news__button button see-all">See all</button> 
+          </div>
+        </div>
+      </section>
+      <section id="reviews" class="reviews mbottom">
+        <div class="reviews__container container">
+          <div class="reviews__inner">
+            <h3 data-name="reviews-title" class="reviews__title title">Reviews</h3>
+            <ul class="reviews__companies">
+              <li class="reviews__company">
+                <a href="#">
+                  <img src="img/reviews/reviews_1.png" alt="" class="reviews__company--img">
+                </a>              </li>
+              <li class="reviews__company">
+                <a href="#">
+                  <img src="img/reviews/reviews_2.png" alt="" class="reviews__company--img">
+                </a>              </li>
+              <li class="reviews__company">
+                <a href="#">
+                  <img src="img/reviews/reviews_3.png" alt="" class="reviews__company--img">
+                </a>              </li>
+              <li class="reviews__company">
+                <a href="#">
+                  <img src="img/reviews/reviews_4.png" alt="" class="reviews__company--img">
+                </a>
+              </li>
+            </ul>
+            <button data-name="button-see-all" class="reviews__button button see-all">See all</button> 
           </div>
         </div>
       </section>
@@ -114,28 +276,28 @@
               <a href="https://t.me/@Swappy_bot" class="footer__paragraph--imgbox">
                 <img src="img/footer/Telegram.svg" alt="#" class="footer__paragraph--img">
               </a>
-              <h5 class="footer__paragraph--title text-regular-16">Telegram</h5>
+              <h5 data-name="footer-p-title" class="footer__paragraph--title text-regular-16">Telegram</h5>
               <a href="https://t.me/@Swappy_bot" class="footer__paragraph--text title-medium-16 ellipsis">@Swappy_bot</a>
             </li>
             <li class="footer__paragraph">
               <a href="" class="footer__paragraph--imgbox">
                 <img src="img/footer/Location.svg" alt="#" class="footer__paragraph--img">
               </a>
-              <h5 class="footer__paragraph--title text-regular-16">Address</h5>
+              <h5 data-name="footer-p-title" class="footer__paragraph--title text-regular-16">Address</h5>
               <a href="" class="footer__paragraph--text title-medium-14 ellipsis">70 Bowman St. South Windsor, CT 06074</a>
             </li>
             <li class="footer__paragraph">
               <a href="tel:+19032532535" class="footer__paragraph--imgbox">
                 <img src="img/footer/Phone.svg" alt="#" class="footer__paragraph--img">
               </a>
-              <h5 class="footer__paragraph--title text-regular-16">Phone</h5>
+              <h5 data-name="footer-p-title" class="footer__paragraph--title text-regular-16">Phone</h5>
               <a href="tel:+19032532535" class="footer__paragraph--text title-medium-14 ellipsis">+19032532535</a>
             </li>
             <li class="footer__paragraph">
               <a href="mailto:swappybot@gmail.com" class="footer__paragraph--imgbox">
                 <img src="img/footer/Mail.svg" alt="#" class="footer__paragraph--img">
               </a>
-              <h5 class="footer__paragraph--title text-regular-16">Email</h5>
+              <h5 data-name="footer-p-title" class="footer__paragraph--title text-regular-16">Email</h5>
               <a href="mailto:swappybot@gmail.com" class="footer__paragraph--text title-medium-14 ellipsis">swappybot@gmail.com</a>
             </li>
           </ul>
